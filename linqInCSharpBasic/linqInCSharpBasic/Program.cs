@@ -35,7 +35,43 @@ namespace linqInCSharpBasic
             }
             //bool tr = false;
             //Console.WriteLine(tr);
+            Dictionary<int,string> dict = new Dictionary<int, string>() ;
+            dict.Add(1, "salih");
+            foreach (var num in dict)
+            {
+                Console.WriteLine(num);
+            }
+            foreach (char s in dict[1])
+            {
+                Console.WriteLine(s);
+            }
+            //var dictOfLists = new Dictionary<string, List<int>>();
 
+            var dic =new Dictionary<int,List<int>>() ;
+            dic[1]=new List<int>() { 1,2,3};
+            dic[1] = new List<int>() { 1, 2, 3 };
+            dic[1] = new List<int>() { 1, 2, 3 };
+            Console.WriteLine("dictionary of list");
+            foreach(var num in dic)
+            {
+                Console.WriteLine("key :{0}",num.Key);
+               
+            }
+            var re = from num in dic
+                     where num.Key == 1
+                     select num;
+            Console.WriteLine(re.GetType());
+            //foreach (var num in re)
+            //{
+            //    foreach (var num2 in num.Value)
+            //    {
+            //        Console.WriteLine(num2);
+            //    }
+            //}
+
+            Console.ReadKey();
+            
         }
+        
     }
 }
