@@ -15,7 +15,7 @@ namespace linqInCSharpBasic
                 Console.WriteLine(num); 
             }
             //int a = 10;
-            //double b = 20;
+            //double b = 20;\
             //int c  =Convert.ToInt32(a + b);
             //Console.WriteLine(a + b);
             //using parse
