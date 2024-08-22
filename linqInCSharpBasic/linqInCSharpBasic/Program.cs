@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace linqInCSharpBasic
 {
@@ -54,8 +55,9 @@ namespace linqInCSharpBasic
             Console.WriteLine("dictionary of list");
             foreach(var num in dic)
             {
-                Console.WriteLine("key :{0}",num.Key);
-               
+                //Console.WriteLine("key :{0}",num.Key);
+                Console.WriteLine($"key :{num.Key}");
+
             }
             var re = from num in dic
                      where num.Key == 1
@@ -68,7 +70,20 @@ namespace linqInCSharpBasic
             //        Console.WriteLine(num2);
             //    }
             //}
-
+            var njn = 10;
+            Console.WriteLine(njn.GetType());//int32
+            List<int> list1=new List<int>() { 1,2,3,4,5,6};
+            foreach (var item in list1)
+            {
+                
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("parralel foreach");
+            //parralel foreach
+            Parallel.ForEach(list1, x =>
+            {
+                Console.WriteLine(x);
+            });
             Console.ReadKey();
             
         }
